@@ -16,6 +16,13 @@
             "problemMatcher": [
                 "$msCompile"
             ]
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ]
         }
     ]
 }

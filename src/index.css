@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.hidden {
+  display: none;
+}
+
+/* .img-thumbnail:active, .img-thumbnail:focus, .img-thumbnail:hover { */
+  /* background-color: #161617;  */
+  /* border-color: #494F57;  */
+/* } */
