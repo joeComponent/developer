@@ -81,13 +81,35 @@ import $ from 'jquery';
 // Git
 // Flexibility and Integration: This demo combines React, Bootstrap, and JQuery in a single program.
 
+var bkgrnd = {
+	backgroundImage: "url(" + imgStudio1 + ")",
+	"background-position": "top",
+	"background-repeat": "no-repeat",
+	"background-size": "stretch"
+};
+
+
 function App() {
 	//** JQuery Event Listeners: HideFooter */
 	window.onload = function() { 
-		HideFooter('#form0Div'); 
-		HideFooter('#form2Div'); 
-		HideFooter('#form4Div'); 
+		selectThumbOnClick('#form0Div');
+		clearOnHeaderClick('#form0');
+
+		selectThumbOnClick('#form1Div');
+		clearOnHeaderClick('#form1');
+
+		selectThumbOnClick('#form2Div');
+		clearOnHeaderClick('#form2');
+
+		selectThumbOnClick('#form4Div');
+		clearOnHeaderClick('#form4');
+
+		document.body.style.backgroundImage = "url(" + imgStudio2 + "), url(" + imgStudio1 + "), url(" + imgStudio3 + ")";
+		document.body.style.backgroundPosition = "top left, top right, bottom left";
+		document.body.style.backgroundRepeat = "no-repeat";
+		document.body.style.backgroundSize = "50% 50%, 50% 50%, 100% 50%";
 	}
+
 	return (
 		<div className="App">
 
@@ -121,7 +143,25 @@ function App() {
 			</nav>
 
 			<div id="accordion">
-				<div class="card bg-white border-dark mb-3 my-3">
+
+				<div class="card bg-white border-dark mb-5 my-5">
+					<div id="form3" class="card-header bg-info text-white" aria-controls="form3Div">
+						<h2 class="card-title">Card title</h2>
+						<h3 class="card-subtitle">Card subtitle</h3>
+					</div>
+					<div id="form3Div">
+						<div class="card-body">
+							<label for="prevCommsnNbr">Active Commission Number</label>
+							<input id="form3FldId1" type="text" class="form-control form-control-sm" />
+							{/* <span id="wait" class="bg-warning d-none">Validating... <img src="../img/wait.gif" /></span> */}
+						</div>
+						<div class="card-footer bg-warning">
+							<p>Card footer, background warning.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white border-dark mb-3">
 					<div id="form0" class="card-header bg-info text-white" data-toggle="collapse" data-target=".form0-collapse"
 						aria-expanded="false" aria-controls="form0Div">
 						<h2 class="card-title">Design</h2>
@@ -277,24 +317,6 @@ function App() {
 				</div>
 
 				<div class="card bg-white border-dark mb-3">
-					<div id="form3" class="card-header bg-info text-white" data-toggle="collapse" data-target=".form3-collapse"
-						aria-expanded="false" aria-controls="form3Div">
-						<h2 class="card-title">Card title</h2>
-						<h3 class="card-subtitle">Card subtitle</h3>
-					</div>
-					<div id="form3Div" class="collapse form3-collapse" data-parent='#accordion'>
-						<div class="card-body">
-							<label for="prevCommsnNbr">Active Commission Number</label>
-							<input id="form3FldId1" type="text" class="form-control form-control-sm" />
-							<span id="wait" class="bg-warning d-none">Validating... <img src="../img/wait.gif" /></span>
-						</div>
-						<div class="card-footer bg-warning">
-							<p>Card footer, background warning.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="card bg-white border-dark mb-3">
 					<div id="form4" class="card-header bg-info text-white" data-toggle="collapse" data-target=".form4-collapse"
 						aria-expanded="false" aria-controls="form4Div">
 						<h2 class="card-title">Code</h2>
@@ -394,37 +416,35 @@ function App() {
 			</div>
 			<div class="card bg-white border-dark mb-3">
 				<div class="card-header">
-					<h1 class="card-title">title</h1>
-					<h2 class="card-subtitle">Contact Information</h2>
+					<h1 class="card-title">Contact</h1>
+					<h2 class="card-subtitle">Send a Message</h2>
 				</div>
 
 				<div class="card-body">
 					<div class="row mx-auto">
-						<div class="col-4">
+						<div id="firstNmFld" class="col-4">
 							<label for="firstName" class="col-form-label">First Name</label>
 							<input id="firstName" class="form-control form-control-sm" />
-						</div>
-						<div id="mdleNmFld" class="col-4">
-							<label for="mdleNm" class="col-form-label">Middle Name</label>
-							<input id="mdleNm" name="legalName.mdleName" class="form-control form-control-sm" />
 						</div>
 						<div id="lastNmFld" class="col-4">
 							<label for="lastNm" class="col-form-label">Last Name</label>
 							<input id="lastNm" class="form-control form-control-sm" />
+						</div>
+						<div id="jobFld" class="col-4">
+							<label for="jobNm" class="col-form-label">Job Title</label>
+							<input id="jobNm" class="form-control form-control-sm" />
 						</div>
 					</div>
 					<div id="emailFld" class="col-12">
 						<label for="email" class="col-form-label">Email Address</label>
 						<input id="email" type="text" class="form-control form-control-sm" />
 					</div>
+					<div id="msgFld" class="col-12">
+						<label for="msg" class="col-form-label">Message</label>
+						<textarea id="msg" class="form-control form-control-sm" />
+					</div>
 				</div>
-				<div class="card-footer">
-					footer
-				</div>
-			</div>
-
-			<div class="card bg-white border-dark mb-3">
-				<div class="card-body text-right">
+				<div class="card-footer text-right">
 					<input id="button1" type="button" class="btn btn-dark bg-primary" value="Submit Button" />
 				</div>
 			</div>
@@ -432,13 +452,26 @@ function App() {
 	);
 }
 
-function HideFooter(parentId) {
-	return $(parentId).on('hidden.bs.collapse', () => $(parentId + ' .card-footer').collapse('hide'));
+function clearOnHeaderClick(parentId) {
+	var bodyDiv = parentId + "Div"; 
+	var footDiv = bodyDiv + " .card-footer"; 
+	return $(parentId).on('click', function () {;
+		$(bodyDiv).find('div.img-thumbnail').removeClass('active');
+		$(footDiv).collapse('hide');
+	});
+}
+
+function selectThumbOnClick(parentId) {
+	return $(parentId).find('div.img-thumbnail').on('click', function () {
+		$(parentId).find('div.img-thumbnail').removeClass('active');
+		$(this).addClass('active');
+	});
 }
 
 function ThumbCell(props) {
+	var divId = props.footClass.replace(/\./g, "");
 	return (
-		<div className={"col-sm img-thumbnail " + props.grp} data-toggle="collapse" data-target={props.footClass}>
+		<div id={divId} className={"col-sm img-thumbnail btn btn-secondary border-white " + props.grp} data-toggle="collapse" data-target={props.footClass}>
 			<img alt='' src={props.img} className="img-fit mx-auto d-block" style={{ width:100 + '%' }}/>
 		</div>
 	);
@@ -446,14 +479,6 @@ function ThumbCell(props) {
 
 function CardFooter(props) {
 	var parentId = '#' + props.accrdnPrnt;
-	var footCls = "div[data-target='." + props.footClass + "']";
-
-	$(footCls).on('shown.bs.collapse', () => console.log('shown - footCls = ' + footCls));
-	$(footCls).on('hidden.bs.collapse', () => console.log('hidden - footCls = ' + footCls));
-	// $(footCls).on('shown.bs.collapse', () => $(parentId).addClass('bg-success'));
-	// $(footCls).on('shown.bs.collapse', () => $(parentId).removeClass('bg-light'));
-	// $(footCls).on('hidden.bs.collapse', () => $(parentId).addClass('bg-light'));
-	// $(footCls).on('hidden.bs.collapse', () => $(parentId).removeClass('bg-success'));
 	return (
 	<div className={'card-footer bg-warning collapse ' + props.footClass} data-parent={parentId}>
 		<h1><code>{props.imgTitle}</code></h1>
