@@ -1,10 +1,17 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import imgSC from '../graphic/prg/SC.png';
+
+//  d-md-none
 
 const Navigation = () => {
     return(
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-            <NavLink className="navbar-brand d-block d-md-none" to="/">WebSiteName</NavLink>
+        <nav className="navbar navbar-dark bg-dark navbar-expand-md">
+            <NavLink className="navbar-brand d-block navbar-toggler" to="/">
+                <img alt='' src={imgSC} className="d-inline-block align-center mr-2" style={{ width: 60 + 'px' }}/>
+                WebSiteName
+            </NavLink>
+
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
                 <span className="navbar-toggler-icon"></span>
             </button>

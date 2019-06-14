@@ -37,3 +37,11 @@
   height: 100px;
   object-fit: contain;
 }
+
+
+body {
+  background-image: url(./graphic/StudioDesk2.jpg), url(./graphic/StudioDesk.jpg), url(./graphic/StudioDesk3.jpg);
+  background-position: left top, right top, left bottom;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 50% 800px, 50% 800px, 800px 600px;
+}

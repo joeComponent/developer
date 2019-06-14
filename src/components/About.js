@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import '../App.css';
+import { NavLink } from "react-router-dom";
 
 //** Note: Graphics files are kept under src. */
 //** DSGN */
@@ -62,24 +63,6 @@ import imgRtlNet1 from '../graphic/exp/retailNet1.png';
 import imgRtlNet2 from '../graphic/exp/retailNet2.png';
 import imgSosRvw from '../graphic/exp/SosReview18.png';
 
-//** Other */
-import imgStudio1 from '../graphic/StudioDesk.jpg';
-import imgStudio2 from '../graphic/StudioDesk2.jpg';
-import imgStudio3 from '../graphic/StudioDesk3.jpg';
-
-// Tech used:
-// React
-// NodeJS development server.
-// JSX, Babel
-// npm (https://docs.npmjs.com/files/package-lock.json)
-// WebPack, scripts.
-// VS Code, debugging.
-// Bootstrap 4
-// Javascript, HTML, CSS3
-// JQuery
-// Git
-// Flexibility and Integration: This demo combines React, Bootstrap, and JQuery in a single program.
-
 //** JQuery Event Listeners: HideFooter */
 window.onload = function() { 
 	selectThumbOnClick('#form0Div');
@@ -93,35 +76,57 @@ window.onload = function() {
 
 	selectThumbOnClick('#form4Div');
 	clearOnHeaderClick('#form4');
-
-	document.body.style.backgroundImage = "url(" + imgStudio2 + "), url(" + imgStudio1 + "), url(" + imgStudio3 + ")";
-	document.body.style.backgroundPosition = "top left, top right, bottom left";
-	document.body.style.backgroundRepeat = "no-repeat";
-	document.body.style.backgroundSize = "50% 50%, 50% 50%, 100% 50%";
 }
 
 const About = () => {
     return (
 		<div className="App">
-			<div id="accordion">
 
-				<div className="card bg-white border-dark mb-5 my-5">
-					<div id="form3" className="card-header bg-info text-white" aria-controls="form3Div">
-						<h2 className="card-title">Card title</h2>
-						<h3 className="card-subtitle">Card subtitle</h3>
+			<div className="card bg-white border-dark mb-5 my-5">
+				<div id="form3" className="card-header bg-info text-white" aria-controls="form3Div">
+					<h2 className="card-title">About</h2>
+					<h3 className="card-subtitle">Card subtitle</h3>
+				</div>
+				<div id="form3Div">
+					<div className="card-body">
+						<label htmlFor="prevCommsnNbr">Active Commission Number</label>
+						<input id="form3FldId1" type="text" className="form-control form-control-sm" />
+						{/* <span id="wait" class="bg-warning d-none">Validating... <img src="../img/wait.gif" /></span> */}
 					</div>
-					<div id="form3Div">
-						<div className="card-body">
-							<label htmlFor="prevCommsnNbr">Active Commission Number</label>
-							<input id="form3FldId1" type="text" className="form-control form-control-sm" />
-							{/* <span id="wait" class="bg-warning d-none">Validating... <img src="../img/wait.gif" /></span> */}
-						</div>
-						<div className="card-footer bg-warning">
-							<p>Card footer, background warning.</p>
+					<div className="card-footer bg-warning container-fluid">
+						Flexibility and Integration: This site combines React, Bootstrap, and JQuery in a single program.<br/>
+						Tech used in the creation of this web page:
+						<div class="row mx-auto">
+							<div class="col-md-4">
+								<ul>
+									<li>React</li>
+									<li>JSX, Babel</li>
+									<li>WebPack</li>
+									<li>Bootstrap 4</li>
+									<li>Git</li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul>
+									<li>JQuery</li>
+									<li>NodeJS</li>
+									<li><a target="_blank" href="https://docs.npmjs.com/files/package-lock.json" rel="noopener noreferrer">npm</a></li>
+									<li>Javascript, HTML, CSS3</li>
+									<li>VS Code</li>
+								</ul>
+							</div>
+							<div className="col-md-2">
+
+							</div>
+							<div className="col-md-2 text-right">
+								<NavLink className="nav-link btn btn-dark bg-primary" exact to="/contact">Contact</NavLink>
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<div id="accordion">
 				<div className="card bg-white border-dark mb-3">
 					<div id="form0" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form0-collapse"
 						aria-expanded="false" aria-controls="form0Div">
@@ -373,40 +378,6 @@ const About = () => {
 							WebLogic is a Java EE web application server.
 						</CardFooter>
 					</div>
-				</div>
-			</div>
-			<div className="card bg-white border-dark mb-3">
-				<div className="card-header">
-					<h1 className="card-title">Contact</h1>
-					<h2 className="card-subtitle">Send a Message</h2>
-				</div>
-
-				<div className="card-body">
-					<div className="row mx-auto">
-						<div id="firstNmFld" className="col-4">
-							<label htmlFor="firstName" className="col-form-label">First Name</label>
-							<input id="firstName" className="form-control form-control-sm" />
-						</div>
-						<div id="lastNmFld" className="col-4">
-							<label htmlFor="lastNm" className="col-form-label">Last Name</label>
-							<input id="lastNm" className="form-control form-control-sm" />
-						</div>
-						<div id="jobFld" className="col-4">
-							<label htmlFor="jobNm" className="col-form-label">Job Title</label>
-							<input id="jobNm" className="form-control form-control-sm" />
-						</div>
-					</div>
-					<div id="emailFld" className="col-12">
-						<label htmlFor="email" className="col-form-label">Email Address</label>
-						<input id="email" type="text" className="form-control form-control-sm" />
-					</div>
-					<div id="msgFld" className="col-12">
-						<label htmlFor="msg" className="col-form-label">Message</label>
-						<textarea id="msg" className="form-control form-control-sm" />
-					</div>
-				</div>
-				<div className="card-footer text-right">
-					<input id="button1" type="button" className="btn btn-dark bg-primary" value="Submit Button" />
 				</div>
 			</div>
 		</div>

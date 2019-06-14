@@ -5,6 +5,7 @@
   "homepage": "http://localhost:3000/my-app",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "emailjs-com": "^2.3.2",
     "jquery": "^3.4.1",
     "popper.js": "^1.12.9",
     "react": "^16.8.6",
