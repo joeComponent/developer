@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'jquery';
-import 'popper.js/popper.min.js';
+import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap';
 
 ReactDOM.render(<App />, document.getElementById('root'));
