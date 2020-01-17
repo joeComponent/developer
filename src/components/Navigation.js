@@ -7,7 +7,7 @@ import imgSC from '../graphic/prg/SC.png';
 const Navigation = () => {
     return(
         <nav className="navbar navbar-dark bg-dark navbar-expand-md">
-            <NavLink className="navbar-brand d-block navbar-toggler" to="/">
+            <NavLink className="navbar-brand d-block navbar-toggler" to="/developer">
                 <img alt='' src={imgSC} className="d-inline-block align-center mr-2" style={{ width: 60 + 'px' }}/>
                 WebSiteName
             </NavLink>
@@ -19,13 +19,13 @@ const Navigation = () => {
             <div className="collapse navbar-collapse" id="myNavbar">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <NavLink className="nav-link" exact to="/">Home</NavLink>
+                        <NavLink className="nav-link" exact to="/developer">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/about">About</NavLink>
+                        <NavLink className="nav-link" to="/developer/about">About</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                        <NavLink className="nav-link" to="/developer/contact">Contact</NavLink>
                     </li>
                 </ul>
                 {/* <ul class="navbar-nav"> */}
