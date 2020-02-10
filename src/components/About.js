@@ -119,7 +119,7 @@ const About = () => {
 
 							</div>
 							<div className="col-md-2 text-right">
-								<NavLink className="nav-link btn btn-dark bg-primary" exact to="/contact">Contact</NavLink>
+								<NavLink className="nav-link btn btn-dark bg-primary" exact to="/developer/contact">Contact</NavLink>
 							</div>
 						</div>
 					</div>
@@ -130,8 +130,8 @@ const About = () => {
 				<div className="card bg-white border-dark mb-3">
 					<div id="form0" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form0-collapse"
 						aria-expanded="false" aria-controls="form0Div">
-						<h2 className="card-title">Design</h2>
-						<h3 className="card-subtitle">Image Files</h3>
+						<h2 className="card-title">Experience</h2>
+						<h3 className="card-subtitle">Organizations and projects I've developed for...</h3>
 					</div>
 					<div id="form0Div" className="collapse form0-collapse" data-parent='#accordion'>
 						<div className="card-body">
@@ -192,8 +192,8 @@ const About = () => {
 				<div className="card bg-white border-dark mb-3">
 					<div id="form1" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form1-collapse"
 						aria-expanded="false" aria-controls="form1Div">
-						<h2 className="card-title">Design</h2>
-						<h3 className="card-subtitle">Image Files</h3>
+						<h2 className="card-title">Software Design</h2>
+						<h3 className="card-subtitle">Software design tools and techniques I utilize...</h3>
 					</div>
 					<div id="form1Div" className="collapse form1-collapse" data-parent='#accordion'>
 						<div className="card-body">
@@ -236,8 +236,8 @@ const About = () => {
 				<div className="card bg-white border-dark mb-3">
 					<div id="form2" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form2-collapse"
 						aria-expanded="false" aria-controls="form2Div">
-						<h2 className="card-title">Organization</h2>
-						<h3 className="card-subtitle">Image Files</h3>
+						<h2 className="card-title">Education</h2>
+						<h3 className="card-subtitle">Universities attended leading to a Masters in Information Systems...</h3>
 					</div>
 					<div id="form2Div" className="collapse form2-collapse" data-parent='#accordion'>
 						<div className="card-body container">
@@ -285,8 +285,8 @@ const About = () => {
 				<div className="card bg-white border-dark mb-3">
 					<div id="form4" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form4-collapse"
 						aria-expanded="false" aria-controls="form4Div">
-						<h2 className="card-title">Code</h2>
-						<h3 className="card-subtitle">Image Files</h3>
+						<h2 className="card-title">Technology</h2>
+						<h3 className="card-subtitle">Some dev languages and tools I've utilized...</h3>
 					</div>
 					<div id="form4Div" className="collapse form4-collapse" data-parent='#accordion'>
 						<div className="card-body">
