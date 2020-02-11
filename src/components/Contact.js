@@ -36,8 +36,20 @@ const Contact = () => {
                             <textarea id="msg" className="form-control form-control-sm" placeholder="Enter your message here" required />
                         </div>
                     </div>
-                    <div className="card-footer text-right">
-                        <input id="submitContact" type="submit" className="btn btn-dark bg-primary" value="Submit" />
+                    <div className="card-footer">
+                        <div className="text-right">
+                            <input id="submitContact" type="submit" className="btn btn-dark bg-primary" value="Submit" />
+                        </div>
+                        <span className="text-left">
+                            Note: currently non-functional, for example purposes, contact me at chris@surveyorcraft.com
+                        </span>
+                        <p>Links:</p>
+                        <div className="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/joeComponent">My Github Profile</a>
+                        </div>
+                        <p className="nav-item">
+                            <a class="nav-link" target="_blank" href="https://stackoverflow.com/users/6535670/joecomponent?tab=profile">My StackOverflow Profile</a>
+                        </p>
                     </div>
                 </div>
             </form>

@@ -85,13 +85,12 @@ const About = () => {
 			<div className="card bg-white border-dark mb-5 my-5">
 				<div id="form3" className="card-header bg-info text-white" aria-controls="form3Div">
 					<h2 className="card-title">About</h2>
-					<h3 className="card-subtitle">Card subtitle</h3>
+					<h3 className="card-subtitle">joeComponent's background</h3>
 				</div>
 				<div id="form3Div">
 					<div className="card-body">
-						<label htmlFor="prevCommsnNbr">Active Commission Number</label>
+						<label htmlFor="prevCommsnNbr">Random Example Field (using bootstrap)</label>
 						<input id="form3FldId1" type="text" className="form-control form-control-sm" />
-						{/* <span id="wait" class="bg-warning d-none">Validating... <img src="../img/wait.gif" /></span> */}
 					</div>
 					<div className="card-footer bg-warning container-fluid">
 						Flexibility and Integration: This site combines React, Bootstrap, and JQuery in a single program.<br/>
@@ -131,7 +130,7 @@ const About = () => {
 					<div id="form0" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form0-collapse"
 						aria-expanded="false" aria-controls="form0Div">
 						<h2 className="card-title">Experience</h2>
-						<h3 className="card-subtitle">Organizations and projects I've developed for...</h3>
+						<h3 className="card-subtitle">Sample of the Organizations and projects I've developed for...</h3>
 					</div>
 					<div id="form0Div" className="collapse form0-collapse" data-parent='#accordion'>
 						<div className="card-body">
@@ -286,7 +285,7 @@ const About = () => {
 					<div id="form4" className="card-header bg-info text-white" data-toggle="collapse" data-target=".form4-collapse"
 						aria-expanded="false" aria-controls="form4Div">
 						<h2 className="card-title">Technology</h2>
-						<h3 className="card-subtitle">Some dev languages and tools I've utilized...</h3>
+						<h3 className="card-subtitle">Some development languages and tools I've utilized...</h3>
 					</div>
 					<div id="form4Div" className="collapse form4-collapse" data-parent='#accordion'>
 						<div className="card-body">
