@@ -11,7 +11,7 @@ const Error = () => {
 				</div>
 				<div id="form3Div">
 					<div className="card-body">
-                        Error: path doesn't exist.
+                        Error: path doesn't exist.  NOTE: intentional, to display I can handle errors gracefully :-)
 					</div>
 					<div className="card-footer bg-warning container-fluid">
 						This is the card footer.
