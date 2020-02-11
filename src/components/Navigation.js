@@ -7,7 +7,7 @@ import imgSC from '../graphic/prg/joeC.png';
 const Navigation = () => {
     return(
         <nav className="navbar navbar-dark bg-dark navbar-expand-md">
-            <NavLink className="navbar-brand d-block navbar-toggler" to="/">
+            <NavLink className="navbar-brand d-block navbar-toggler" to="/developer">
                 <img alt='' src={imgSC} className="d-inline-block align-center mr-2" style={{ width: 60 + 'px' }}/>
                 joeComponent
             </NavLink>

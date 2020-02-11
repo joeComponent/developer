@@ -47,9 +47,12 @@ const Contact = () => {
                         <div className="nav-item">
                             <a class="nav-link" target="_blank" href="https://github.com/joeComponent">My Github Profile</a>
                         </div>
-                        <p className="nav-item">
+                        <div className="nav-item">
                             <a class="nav-link" target="_blank" href="https://stackoverflow.com/users/6535670/joecomponent?tab=profile">My StackOverflow Profile</a>
-                        </p>
+                        </div>
+                        <div className="nav-item">
+                            <a class="nav-link" href="https://surveyorCraft.com">SurveyorCraft (Github page)</a>
+                        </div>
                     </div>
                 </div>
             </form>
