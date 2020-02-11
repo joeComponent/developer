@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "406fa8f4ca51796e0bc6dc32a7bd49b6",
+    "revision": "8110842d7e6e64709efdfaa2a16331cd",
     "url": "/developer/index.html"
   },
   {
-    "revision": "5f0e10b9a00826efeec2",
+    "revision": "0f3032f936867b74b7ff",
     "url": "/developer/static/css/2.67123b20.chunk.css"
   },
   {
-    "revision": "0a68c78d9361a9928649",
+    "revision": "a5f49f796509e6ded7c0",
     "url": "/developer/static/css/main.9d9503f2.chunk.css"
   },
   {
-    "revision": "5f0e10b9a00826efeec2",
-    "url": "/developer/static/js/2.7ea91042.chunk.js"
+    "revision": "0f3032f936867b74b7ff",
+    "url": "/developer/static/js/2.c178d54e.chunk.js"
   },
   {
-    "revision": "0a68c78d9361a9928649",
-    "url": "/developer/static/js/main.58768065.chunk.js"
+    "revision": "a5f49f796509e6ded7c0",
+    "url": "/developer/static/js/main.253978a6.chunk.js"
   },
   {
     "revision": "97abc3a5f2ddcb309763",
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/developer/static/media/PayPal.f713fea0.png"
   },
   {
-    "revision": "0d7303d5f63738ec38f21465017458d6",
-    "url": "/developer/static/media/SC.0d7303d5.png"
+    "revision": "e8dbfc95875bcbdd40e535ee0166706c",
+    "url": "/developer/static/media/SC.e8dbfc95.png"
   },
   {
     "revision": "b512c615c34aa28c4037645775baff90",
